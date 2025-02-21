@@ -40,7 +40,7 @@ def consumidor():
         buffer.task_done()
 
 
-if __name__ == '__main__':
+def main():
     threading.Thread(target=produtor, daemon=True).start()
     threading.Thread(target=consumidor, daemon=True).start()
 
